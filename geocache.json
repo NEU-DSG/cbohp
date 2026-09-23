@@ -1,0 +1,286 @@
+{
+    "Boston, MA": {
+        "lat": 42.3555076,
+        "lng": -71.0565364
+    },
+    "Hampton, VA": {
+        "lat": 37.0298687,
+        "lng": -76.34522179999999
+    },
+    "Maryland": {
+        "lat": 39.0457549,
+        "lng": -76.64127119999999
+    },
+    "Virginia": {
+        "lat": 37.4315734,
+        "lng": -78.6568942
+    },
+    "Cambridge, MA": {
+        "lat": 42.3666036,
+        "lng": -71.1056916
+    },
+    "West Africa": {
+        "lat": 13.531665,
+        "lng": -2.4604145
+    },
+    "Nigeria": {
+        "lat": 9.081999,
+        "lng": 8.675277
+    },
+    "Gloucester, VA": {
+        "lat": 37.4098631,
+        "lng": -76.52661739999999
+    },
+    "Brazil": {
+        "lat": -14.235004,
+        "lng": -51.92528
+    },
+    "Massachusetts": {
+        "lat": 42.4072107,
+        "lng": -71.3824374
+    },
+    "Southampton County, VA": {
+        "lat": 36.6788512,
+        "lng": -77.10249019999999
+    },
+    "Oregon": {
+        "lat": 43.8041334,
+        "lng": -120.5542012
+    },
+    "Boykins, VA": {
+        "lat": 36.583207,
+        "lng": -77.1999675
+    },
+    "Barbados": {
+        "lat": 13.193887,
+        "lng": -59.543198
+    },
+    "Port Chester, NY": {
+        "lat": 41.0017643,
+        "lng": -73.66568339999999
+    },
+    "Howard St Cambridge, MA": {
+        "lat": 42.3653111,
+        "lng": -71.1108597
+    },
+    "Chickamauga, GA": {
+        "lat": 34.8711879,
+        "lng": -85.2907896
+    },
+    "New Jersey": {
+        "lat": 40.0583238,
+        "lng": -74.4056612
+    },
+    "Greater Boston Area, MA": {
+        "lat": 42.3600709,
+        "lng": -71.0588305
+    },
+    "Selma, AL": {
+        "lat": 32.4073589,
+        "lng": -87.02110069999999
+    },
+    "Dallas County, AL": {
+        "lat": 32.2332138,
+        "lng": -87.14228949999999
+    },
+    "North Carolina": {
+        "lat": 35.7595731,
+        "lng": -79.01929969999999
+    },
+    "Greater Boston, MA": {
+        "lat": 42.3600709,
+        "lng": -71.0588305
+    },
+    "Charles River, Cambridge MA": {
+        "lat": 42.3666036,
+        "lng": -71.1056916
+    },
+    "Arlington, MA": {
+        "lat": 42.4153925,
+        "lng": -71.1564729
+    },
+    "Callender St Cambridge, MA": {
+        "lat": 42.3653682,
+        "lng": -71.112265
+    },
+    "New Haven, CT": {
+        "lat": 41.308274,
+        "lng": -72.9278835
+    },
+    "Minnesota": {
+        "lat": 46.729553,
+        "lng": -94.6858998
+    },
+    "West Virginia": {
+        "lat": 38.5976262,
+        "lng": -80.4549026
+    },
+    "Baltimore, MD": {
+        "lat": 39.2905023,
+        "lng": -76.6104072
+    },
+    "New Hampshire": {
+        "lat": 43.1938516,
+        "lng": -71.5723953
+    },
+    "Magee St Cambridge, MA": {
+        "lat": 42.3663178,
+        "lng": -71.112407
+    },
+    "Central Square Cambridge, MA": {
+        "lat": 42.3650455,
+        "lng": -71.1025628
+    },
+    "Columbia St Cambridge, MA": {
+        "lat": 42.3688348,
+        "lng": -71.0968172
+    },
+    "Caribbean": {
+        "lat": 21.4691137,
+        "lng": -78.6568942
+    },
+    "Connecticut": {
+        "lat": 41.6032207,
+        "lng": -73.087749
+    },
+    "Somerville, MA": {
+        "lat": 42.3875968,
+        "lng": -71.0994968
+    },
+    "Belmont, MA": {
+        "lat": 42.3956405,
+        "lng": -71.1776114
+    },
+    "South Boston, MA": {
+        "lat": 42.3354829,
+        "lng": -71.0456735
+    },
+    "New York": {
+        "lat": 40.7127753,
+        "lng": -74.0059728
+    },
+    "Louisiana": {
+        "lat": 30.5190775,
+        "lng": -91.5208624
+    },
+    "Chicago, IL": {
+        "lat": 41.88325,
+        "lng": -87.6323879
+    },
+    "Kansas": {
+        "lat": 39.011902,
+        "lng": -98.4842465
+    },
+    "Concord Ave Cambridge, MA": {
+        "lat": 42.3858188,
+        "lng": -71.1385347
+    },
+    "Huron Ave Cambridge, MA": {
+        "lat": 42.3805937,
+        "lng": -71.1418095
+    },
+    "Concord, MA": {
+        "lat": 42.4603719,
+        "lng": -71.3489484
+    },
+    "Ohio": {
+        "lat": 40.4172871,
+        "lng": -82.90712300000001
+    },
+    "Ghana": {
+        "lat": 7.946527,
+        "lng": -1.023194
+    },
+    "England": {
+        "lat": 52.83816401015793,
+        "lng": -2.327480843616569
+    },
+    "Africa": {
+        "lat": -8.783195,
+        "lng": 34.508523
+    },
+    "Ethiopia": {
+        "lat": 9.145000000000001,
+        "lng": 40.489673
+    },
+    "Awash River, Ethiopia": {
+        "lat": 9.627178947550629,
+        "lng": 40.03977088398194
+    },
+    "Kenya": {
+        "lat": -0.023559,
+        "lng": 37.906193
+    },
+    "Uganda": {
+        "lat": 1.373333,
+        "lng": 32.290275
+    },
+    "Europe": {
+        "lat": 54.5259614,
+        "lng": 15.2551187
+    },
+    "North America": {
+        "lat": 54.5259614,
+        "lng": -105.2551187
+    },
+    "Mexico": {
+        "lat": 23.634501,
+        "lng": -102.552784
+    },
+    "Vermont": {
+        "lat": 44.5588028,
+        "lng": -72.57784149999999
+    },
+    "United States": {
+        "lat": 38.7945952,
+        "lng": -106.5348379
+    },
+    "Harvard Square Cambridge, MA": {
+        "lat": 42.373465,
+        "lng": -71.1189467
+    },
+    "South Shore, MA": {
+        "lat": 42.4072107,
+        "lng": -71.3824374
+    },
+    "Linnaean St Cambridge, MA": {
+        "lat": 42.3836764,
+        "lng": -71.1232015
+    },
+    "Agassiz St Cambridge, MA": {
+        "lat": 42.3850263,
+        "lng": -71.1217128
+    },
+    "Porter Square Cambridge, MA": {
+        "lat": 42.3913695,
+        "lng": -71.1232582
+    },
+    "Jacksonville, FL": {
+        "lat": 30.3297566,
+        "lng": -81.6591529
+    },
+    "Caribbean Islands": {
+        "lat": 21.4691137,
+        "lng": -78.6568942
+    },
+    "Southampton, VA": {
+        "lat": 36.6788512,
+        "lng": -77.10249019999999
+    },
+    "Morocco": {
+        "lat": 31.791702,
+        "lng": -7.092619999999999
+    },
+    "Egypt": {
+        "lat": 26.820553,
+        "lng": 30.802498
+    },
+    "Sudan": {
+        "lat": 12.862807,
+        "lng": 30.217636
+    },
+    "Congo": {
+        "lat": -4.038333,
+        "lng": 21.758664
+    }
+}
