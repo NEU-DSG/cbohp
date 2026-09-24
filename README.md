@@ -1,6 +1,6 @@
 # cbohp
 
-Cambridge Black Oral History Project
+Cambridge Black Oral History Portal
 
 ## Notes
 
