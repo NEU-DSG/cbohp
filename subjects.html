@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+
+<canvas id="chart"></canvas>
+
+<script>
+fetch("subjectdata.json")
+  .then(r => r.json())
+  .then(places => new Chart(chart, {
+    type: "bar",
+    data: {
+      labels: Object.keys(places),
+      datasets: [{
+        label: "Number of mentions",
+        data: Object.values(places)
+      }]
+    },
+    options: {
+      layout: {
+        padding: 75
+      },
+      plugins: {
+        legend: {
+          display: false
+        },
+        title: {
+          display: true,
+          text: "Subjects mentioned in Cambridge Black Oral History Project",
+          color: "#333333",
+          font: {
+            size: 18
+          },
+          padding: {
+            bottom: 30
+          }
+        }
+      },
+      scales: {
+        x: {
+          ticks: {
+            minRotation: 45,
+            maxRotation: 45
+          }
+        }
+      }
+    }
+  }));
+</script>
+
+</body>
+</html>

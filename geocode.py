@@ -1,6 +1,7 @@
 ''' Code for geocoding placenames '''
 import argparse
 import json
+from collections import Counter
 import pandas as pd
 import geopandas as gpd
 import googlemaps
@@ -21,6 +22,12 @@ def save_json(filename, data):
     with open(filename, 'w', encoding='utf-8') as f:
         json.dump(data, f, ensure_ascii=False, indent=4)
 
+def load_data(csvs):
+    ''' to load one or many csvs '''
+    return pd.concat(
+        [pd.read_csv(csv) for csv in csvs],
+        ignore_index=True
+    )
 
 def geocode(placename, cache, gmaps_key):
     ''' This function is to geocode the place names '''
@@ -39,22 +46,10 @@ def geocode(placename, cache, gmaps_key):
         print(" --- placename already in cache --- ")
         return cache[placename]
 
-
-def main():
-    ''' Main function for calling script on its own. '''
-    parser = argparse.ArgumentParser(description='Geocode locations')
-    parser.add_argument(
-        'input_file',
-        help='The CSV file containing geographic placenames')
-    parser.add_argument(
-        'cache',
-        help='JSON of geolocated entities'
-    )
-    args = parser.parse_args()
-    cache = load_json(args.cache)
+def geocode_runner(df, cache):
+    ''' prep df and run geocode over df '''
     # grabs all geographic placenames, place all in a list,
     # strip whitespace, remove duplicates
-    df = pd.read_csv(args.input_file)
     placenames = list(dict.fromkeys(
         x.strip()
         for x in ";".join(df["geographic"].dropna()).split(";")
@@ -79,6 +74,44 @@ def main():
     gdf.to_file('output_data/geocoded_locations.geojson', driver='GeoJSON')
     # Save geocoding cache
     save_json('geocache.json', cache)
+
+
+def main():
+    ''' Main function for calling script on its own. '''
+    parser = argparse.ArgumentParser(description='Geocode locations')
+    parser.add_argument("csvs", nargs="+")
+    parser.add_argument(
+        'cache',
+        help='JSON of geolocated entities'
+    )
+    args = parser.parse_args()
+    cache = load_json(args.cache)
+    
+    df = load_data(args.csvs)
+    geocode_runner(df, cache)
+    
+    # start graphing logic
+    places = {
+        place: count
+        for place, count in Counter(
+            x.strip()
+            for x in ";".join(df["geographic"].dropna()).split(";")
+            if x.strip()
+        ).items()
+        if count >= 3
+    }
+    save_json('bargraphdata.json', places)
+
+    subjects = {
+            subject: count
+            for subject, count in Counter(
+                x.strip()
+                for x in ";".join(df["subject"].dropna()).split(";")
+                if x.strip()
+            ).items()
+            if count >= 5
+        }
+    save_json('subjectdata.json', subjects)
 
 
 if __name__ == "__main__":

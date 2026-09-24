@@ -1,0 +1,23 @@
+body {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: sans-serif;
+    font-weight: lighter;
+    background: #ffffff;
+    color: #000000;
+}
+
+main {
+    text-align: center;
+}
+
+h1 {
+    font-weight: lighter
+}
+
+ul {
+    padding-left: 0;
+    list-style-position: inside
+}

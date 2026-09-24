@@ -282,5 +282,129 @@
     "Congo": {
         "lat": -4.038333,
         "lng": 21.758664
+    },
+    "Brookline, MA": {
+        "lat": 42.33176419999999,
+        "lng": -71.1211635
+    },
+    "Chelsea, MA": {
+        "lat": 42.3917638,
+        "lng": -71.0328284
+    },
+    "East Boston, MA": {
+        "lat": 42.3800079,
+        "lng": -71.0254241
+    },
+    "Cape Verde": {
+        "lat": 16.5388,
+        "lng": -23.0418
+    },
+    "Rhode Island": {
+        "lat": 41.5800945,
+        "lng": -71.4774291
+    },
+    "New Bedford, MA": {
+        "lat": 41.6340613,
+        "lng": -70.92766569999999
+    },
+    "Western Ave Cambridge, MA": {
+        "lat": 42.3649851,
+        "lng": -71.108015
+    },
+    "Hews Street Cambridge, MA": {
+        "lat": 42.3646816,
+        "lng": -71.1130912
+    },
+    "Brockton, MA": {
+        "lat": 42.0834335,
+        "lng": -71.0183787
+    },
+    "Putnam Ave Cambridge, MA": {
+        "lat": 42.3631217,
+        "lng": -71.1136803
+    },
+    "Revere Beach Revere, MA": {
+        "lat": 42.4255431,
+        "lng": -70.98146270000001
+    },
+    "North Reading, MA": {
+        "lat": 42.5750939,
+        "lng": -71.0786653
+    },
+    "Winchester, MA": {
+        "lat": 42.452303,
+        "lng": -71.1369959
+    },
+    "Guyana": {
+        "lat": 4.860416,
+        "lng": -58.93018
+    },
+    "Brookline St Cambridge, MA": {
+        "lat": 42.359235,
+        "lng": -71.10607
+    },
+    "New York, NY": {
+        "lat": 40.7127753,
+        "lng": -74.0059728
+    },
+    "West Cambridge, MA": {
+        "lat": 42.37681569999999,
+        "lng": -71.13730029999999
+    },
+    "Corcoran Park Cambridge, MA": {
+        "lat": 42.3763832,
+        "lng": -71.15363339999999
+    },
+    "Crane Beach Ipswich, MA": {
+        "lat": 42.6854607,
+        "lng": -70.75624669999999
+    },
+    "Gloucester, MA": {
+        "lat": 42.62453199999999,
+        "lng": -70.660782
+    },
+    "Randolph, MA": {
+        "lat": 42.1626042,
+        "lng": -71.0413284
+    },
+    "East Cambridge, MA": {
+        "lat": 42.3686043,
+        "lng": -71.07739389999999
+    },
+    "Medford, MA": {
+        "lat": 42.4184296,
+        "lng": -71.1061639
+    },
+    "Hoyt Field Cambridge, MA": {
+        "lat": 42.36385,
+        "lng": -71.11224349999999
+    },
+    "Nantasket Beach Hull, MA": {
+        "lat": 42.2917663,
+        "lng": -70.87449
+    },
+    "Salem Willows Salem, MA": {
+        "lat": 42.535172,
+        "lng": -70.870159
+    },
+    "Dover, NH": {
+        "lat": 43.1978624,
+        "lng": -70.8736698
+    },
+    "Durham, NH": {
+        "lat": 43.1339545,
+        "lng": -70.9264393
+    },
+    "Watertown, MA": {
+        "lat": 42.3709299,
+        "lng": -71.1828321
+    },
+    "Atlanta, GA": {
+        "lat": 33.7501275,
+        "lng": -84.3885209
+    },
+    "Philadelphia, PA": {
+        "lat": 39.9525839,
+        "lng": -75.1652215
     }
 }
