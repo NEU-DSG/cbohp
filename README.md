@@ -4,5 +4,5 @@ Cambridge Black Oral History Portal
 
 ## Notes
 
-Currently have removed one placename for privacy reasons
+Currently have removed some placenames for privacy reasons
 

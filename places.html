@@ -52,6 +52,10 @@ fetch("output_data/bargraphdata.json")
             minRotation: 45,
             maxRotation: 45
           }
+        },
+        y: {
+        beginAtZero: true,
+        suggestedMax: Math.max(...Object.values(places)) * 1.1
         }
       }
     }
