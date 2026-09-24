@@ -8,7 +8,7 @@
 <canvas id="chart"></canvas>
 
 <script>
-fetch("subjectdata.json")
+fetch("output_data/subjectdata.json")
   .then(r => r.json())
   .then(places => new Chart(chart, {
     type: "bar",
@@ -29,13 +29,20 @@ fetch("subjectdata.json")
         },
         title: {
           display: true,
-          text: "Subjects mentioned in Cambridge Black Oral History Portal",
+          text: "Subjects mentioned in the Cambridge Black Oral History Portal",
           color: "#333333",
           font: {
             size: 18
           },
           padding: {
-            bottom: 30
+            bottom: 10
+          }
+        },
+        subtitle: {
+          display: true,
+          text: 'For subjects mentioned five or more times',
+          padding: {
+            bottom: 20
           }
         }
       },

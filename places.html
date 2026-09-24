@@ -8,7 +8,7 @@
 <canvas id="chart"></canvas>
 
 <script>
-fetch("bargraphdata.json")
+fetch("output_data/bargraphdata.json")
   .then(r => r.json())
   .then(places => new Chart(chart, {
     type: "bar",
@@ -29,13 +29,20 @@ fetch("bargraphdata.json")
         },
         title: {
           display: true,
-          text: "Places mentioned in Cambridge Black Oral History Portal",
+          text: "Places mentioned in the Cambridge Black Oral History Portal",
           color: "#333333",
           font: {
             size: 18
           },
           padding: {
-            bottom: 30
+            bottom: 10
+          }
+        },
+        subtitle: {
+          display: true,
+          text: 'For places mentioned three or more times',
+          padding: {
+            bottom: 20
           }
         }
       },
