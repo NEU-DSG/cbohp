@@ -3,3 +3,4 @@ config.py
 explore.ipynb
 __pycache__
 input_data/
+testing/

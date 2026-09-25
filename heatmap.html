@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/maplibre-gl/4.7.1/maplibre-gl.css" rel="stylesheet" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/maplibre-gl/4.7.1/maplibre-gl.js"></script>
+  <!-- fill the whole screen with the map -->
+  <style>body { margin: 0; } #map { height: 100vh; }</style>
+</head>
+<body>
+  <div id="map"></div>
+  <script>
+    // make map object
+    const map = new maplibregl.Map({
+      container: 'map',
+      style: 'https://tiles.openfreemap.org/styles/liberty',
+      center: [-71.0598, 42.3584],
+      zoom: 11
+    });
+    // load geojson into map
+    map.on('load', () => {
+      map.addSource('mentions', {
+        type: 'geojson',
+        data: 'output_data/geocoded_locations.geojson'
+      });
+
+      map.addLayer({
+        id: 'heatmap',
+        type: 'heatmap',
+        source: 'mentions',
+        paint: {
+          'heatmap-weight': ['get', 'mentions']
+        }
+      });
+    });
+  </script>
+</body>
+</html>

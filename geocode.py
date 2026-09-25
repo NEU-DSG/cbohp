@@ -48,32 +48,59 @@ def geocode(placename, cache, gmaps_key):
 
 def geocode_runner(df, cache):
     ''' prep df and run geocode over df '''
-    # grabs all geographic placenames, place all in a list,
-    # strip whitespace, remove duplicates
-    placenames = list(dict.fromkeys(
+    # Get all geographic placenames
+    placenames = [
         x.strip()
         for x in ";".join(df["geographic"].dropna()).split(";")
         if x.strip()
-    ))
+    ]
+    # Count how many times each place is mentioned
+    mention_counts = pd.Series(placenames).value_counts()
+    # Remove duplicates for geocoding
+    placenames = list(dict.fromkeys(placenames))
+    # Geocode each unique place
     results = [geocode(x, cache, gmaps) for x in placenames]
-    # create DataFrame
+    # Create DataFrame
     geodf = pd.DataFrame({
         "location": placenames,
+        "mentions": [mention_counts[x] for x in placenames],
         "lat": [x["lat"] if x else None for x in results],
         "lon": [x["lng"] if x else None for x in results]
     })
-    # save to CSV
-    geodf.to_csv('output_data/geocoded_locations.csv', index=False)
-    # create geojson
+    # Save to CSV
+    geodf.to_csv(
+        'output_data/geocoded_locations.csv',
+        index=False
+    )
+    # Create GeoDataFrame
     gdf = gpd.GeoDataFrame(
         geodf,
-        geometry=gpd.points_from_xy(geodf["lon"], geodf["lat"]),
+        geometry=gpd.points_from_xy(
+            geodf["lon"],
+            geodf["lat"]
+        ),
         crs="EPSG:4326"
     )
     # Save GeoJSON
-    gdf.to_file('output_data/geocoded_locations.geojson', driver='GeoJSON')
+    gdf.to_file(
+        'output_data/geocoded_locations.geojson',
+        driver='GeoJSON'
+    )
     # Save geocoding cache
     save_json('geocache.json', cache)
+
+def count_runner(df, column_name, threshold, filename):
+    ''' function to transform data for bar graphs'''
+    terms = {
+            term: count
+            for term, count in Counter(
+                x.strip()
+                for x in ";".join(df[column_name].dropna()).split(";")
+                if x.strip()
+            ).items()
+            if count >= threshold
+        }
+    save_json(filename, terms)
 
 
 def main():
@@ -88,30 +115,13 @@ def main():
     cache = load_json(args.cache)
     
     df = load_data(args.csvs)
+    # run code for geocoding
     geocode_runner(df, cache)
-    
+    # run code for heatmap
     # start graphing logic
-    places = {
-        place: count
-        for place, count in Counter(
-            x.strip()
-            for x in ";".join(df["geographic"].dropna()).split(";")
-            if x.strip()
-        ).items()
-        if count >= 3
-    }
-    save_json('bargraphdata.json', places)
+    count_runner(df, 'geographic', 3, 'output_data/bargraphdata.json')
+    count_runner(df, 'subject', 5, 'output_data/subjectdata.json')
 
-    subjects = {
-            subject: count
-            for subject, count in Counter(
-                x.strip()
-                for x in ";".join(df["subject"].dropna()).split(";")
-                if x.strip()
-            ).items()
-            if count >= 5
-        }
-    save_json('subjectdata.json', subjects)
 
 
 if __name__ == "__main__":
